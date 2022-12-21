@@ -3,16 +3,29 @@ const path = require('path');
 
 const contactsPath = path.normalize("./db/contacts.json");
 
-// TODO: задокументировать каждую функцию
-function listContacts() {
-    console.log('list contacts:')
-    fs.readFile(contactsPath).then(data => console.log(data.toString()))
-  .catch(err => console.log(err.message));
-        //.then((text) => console.log('data', text))
+async function listContacts() {
+    try {
+        console.log('list contacts:')
+        const data = await fs.readFile(contactsPath);
+        console.log('JSON.parse(data)', JSON.parse(data));
+        return JSON.parse(data)
+    } catch (error) {
+        console.log('error', error);
+        return []
+    }
 }
 
-function getContactById(contactId) {
-console.log('contact Id:')
+async function getContactById(contactId) {
+    try {
+        console.log('contact Id:');
+        const contacts = await listContacts();
+        console.log(contacts.find((obj) => obj.id === contactId.toString())) 
+        return contacts.find((obj) => obj.id === contactId.toString())
+    // 
+    } catch (error) {
+        console.log('error', error);
+        return []
+    }
 }
 
 function removeContact(contactId) {

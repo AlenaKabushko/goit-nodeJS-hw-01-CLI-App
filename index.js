@@ -1,6 +1,6 @@
 const contacts = require('./contacts');
 
 contacts.listContacts();
-contacts.getContactById();
-contacts.removeContact();
-contacts.addContact();
+contacts.getContactById(5);
+// contacts.removeContact();
+// contacts.addContact();
