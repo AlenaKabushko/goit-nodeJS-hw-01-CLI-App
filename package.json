@@ -20,5 +20,8 @@
     "homepage": "https://github.com/AlenaKabushko/goit-nodeJS-hw-01-CLI-App#readme",
     "devDependencies": {
         "nodemon": "^2.0.20"
+    },
+    "dependencies": {
+        "uniqid": "^5.4.0"
     }
 }
