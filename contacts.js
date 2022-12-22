@@ -10,7 +10,6 @@ async function listContacts() {
         return JSON.parse(data)
     } catch (error) {
         console.log('error', error);
-        
     }
 }
 
