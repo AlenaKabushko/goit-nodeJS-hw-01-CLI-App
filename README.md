@@ -15,3 +15,5 @@ https://ibb.co/tYWWFB6
 # Удаляем контакт
 
 https://ibb.co/X4NvfFS
+
+<img src="https://i.ibb.co/fSBPVr4/image.png" alt="image" border="0">
